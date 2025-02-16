@@ -8,62 +8,78 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <div class="container">
-            <h1 class="glow">Srinivas Harish</h1>
-            <p>AI Engineer | Visionary | Builder</p>
-            <a href="#about" class="btn">Explore</a>
+            <h1 class="title">Srinivas Harish</h1>
+            <p class="subtitle">AI Engineer | Innovator | Visionary</p>
+            <a href="#projects" class="btn">Explore My Work</a>
         </div>
     </header>
 
-    <section id="about">
+    <!-- About Section -->
+    <section id="about" class="section">
         <div class="container">
             <h2>About Me</h2>
             <p>
-                I am an AI/ML engineer with a passion for using technology to solve real-world problems. With a background in computer engineering, I specialize in deep learning, computer vision, and high-performance computing. My journey is driven by my vision to make a tangible impact on humanity through cutting-edge innovations. 🌍💡
+                I am an AI/ML engineer passionate about pushing the boundaries of technology to solve real-world challenges. My focus is on deep learning, computer vision, and high-performance computing. I am driven by a vision to impact humanity by creating innovative, transformative solutions that empower individuals and industries.
             </p>
         </div>
     </section>
 
-    <section id="projects">
+    <!-- Projects Section -->
+    <section id="projects" class="section">
         <div class="container">
-            <h2>Projects</h2>
-            <div class="grid">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
                 <!-- Football Analysis Project -->
-                <div class="card">
+                <div class="project-card">
                     <h3>⚽ Football Analysis Project</h3>
-                    <p>Leveraging advanced computer vision techniques to analyze football games.</p>
+                    <p>Revolutionizing sports analysis with AI-powered computer vision.</p>
                     <ul>
-                        <li>Used Ultralyitcs YOLOv8 for object detection in images and videos.</li>
-                        <li>Fine-tuned YOLO on custom datasets for more accurate detection.</li>
-                        <li>Employed GMM (Gaussian Mixture Models) for pixel clustering and segmenting players from the background, extracting t-shirt colors.</li>
-                        <li>Improved player tracking using a Kalman filter to ensure accurate bounding boxes.</li>
-                        <li>Used optical flow to analyze camera movements and detect scene dynamics.</li>
-                        <li>Applied CV2's perspective transformation to analyze depth and perspectives in the game.</li>
-                        <li>Calculated player's speed and distance covered using computer vision techniques.</li>
+                        <li>Used YOLOv8 for player detection and tracking.</li>
+                        <li>Segmented players and extracted t-shirt colors using GMM.</li>
+                        <li>Enhanced tracking with Kalman Filter for smooth bounding boxes.</li>
+                        <li>Analyzed speed, distance, and camera movement with optical flow.</li>
+                        <li>Applied perspective transformation to understand depth in the scene.</li>
                     </ul>
                 </div>
-                <!-- Add more projects below -->
-                <div class="card">
-                    <h3>🔬 AI-Powered Image Enhancer</h3>
-                    <p>Using deep learning to upscale and restore images in real-time.</p>
+                <!-- Image Colorizer -->
+                <div class="project-card">
+                    <h3>🎨 AI Image Colorizer</h3>
+                    <p>Bringing black and white photos to life with deep learning.</p>
+                    <ul>
+                        <li>Trained deep learning models to predict colors in grayscale images.</li>
+                        <li>Enhanced user experience with real-time colorization processing.</li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <h3>🚀 Space Trajectory Optimizer</h3>
-                    <p>Simulating and optimizing Hohmann transfer paths for interplanetary travel.</p>
+                <!-- Image Privacy Filter -->
+                <div class="project-card">
+                    <h3>🔒 Image Privacy Filter</h3>
+                    <p>Automatically blurring sensitive information in images.</p>
+                    <ul>
+                        <li>Used object detection to identify sensitive areas like faces or license plates.</li>
+                        <li>Applied Gaussian blur and other techniques for privacy protection.</li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <h3>💻 High-Performance Computing</h3>
-                    <p>Overclocking and fine-tuning CPUs/GPUs for maximum efficiency.</p>
+                <!-- Hohmann Transfer Trajectories -->
+                <div class="project-card">
+                    <h3>🚀 Hohmann Transfer Trajectories</h3>
+                    <p>Optimizing interplanetary travel with orbital mechanics simulations.</p>
+                    <ul>
+                        <li>Developed a simulation for optimal Hohmann transfer trajectories.</li>
+                        <li>Calculated fuel usage and travel times for various planetary transfers.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="section">
         <div class="container">
-            <h2>Let's Connect</h2>
-            <p>If you want to collaborate or discuss groundbreaking ideas, feel free to reach out!</p>
+            <h2>Get In Touch</h2>
+            <p>I am always open to new ideas, collaborations, and opportunities. Let's connect!</p>
             <div class="social-icons">
                 <a href="https://github.com/your-username" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -72,6 +88,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Srinivas Harish. All rights reserved.</p>
     </footer>
