@@ -15,38 +15,50 @@ body {
     overflow-x: hidden;
 }
 
-/* BACKGROUND ANIMATION */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(ellipse at 50% 50%, rgba(0, 240, 255, 0.1), transparent 70%),
-                radial-gradient(ellipse at 30% 70%, rgba(0, 100, 255, 0.08), transparent 70%),
-                radial-gradient(ellipse at 80% 20%, rgba(255, 0, 255, 0.05), transparent 80%);
-    animation: pulseBackground 60s linear infinite;
-    z-index: -10;
+::selection {
+    background: #00f0ff70;
 }
 
-@keyframes pulseBackground {
-    0% { transform: scale(1) rotate(0deg); }
-    50% { transform: scale(1.05) rotate(180deg); }
-    100% { transform: scale(1) rotate(360deg); }
-}
-
-/* HEADER */
 header {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background: radial-gradient(ellipse at center, #0d1117 0%, #06070a 100%);
     text-align: center;
     position: relative;
-    z-index: 2;
 }
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse at top left, #00f0ff10, transparent),
+        radial-gradient(ellipse at bottom right, #00f0ff10, transparent),
+        repeating-linear-gradient(
+            45deg,
+            rgba(0, 240, 255, 0.02),
+            rgba(0, 240, 255, 0.02) 1px,
+            transparent 1px,
+            transparent 20px
+        );
+    background-blend-mode: overlay;
+    animation: ambientFloat 30s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes ambientFloat {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 200%; }
+}
+
+
 
 .container {
     width: 90%;
@@ -91,7 +103,6 @@ p {
     transform: translateY(-3px);
 }
 
-/* SECTION BASE */
 section {
     padding: 100px 0;
     text-align: center;
@@ -117,7 +128,6 @@ h2::after {
     margin: 10px auto 0;
 }
 
-/* PROJECT GRID */
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -178,7 +188,6 @@ h2::after {
     color: #ffffff;
 }
 
-/* SOCIAL ICONS */
 .social-icons {
     margin-top: 25px;
 }
@@ -195,11 +204,23 @@ h2::after {
     color: #ffffff;
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
     background: #0a0a0a;
     font-size: 0.9rem;
     color: #888;
+}
+
+/* Optional: Parallax background for sections */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(135deg, #0f0f1b, #151b2e);
+    z-index: -1;
+    transform: skewY(-2deg);
 }
